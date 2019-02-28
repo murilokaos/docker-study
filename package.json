@@ -1,0 +1,14 @@
+{
+  "name": "node-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.16",
+    "nodemon": "^1.18.10"
+  }
+}

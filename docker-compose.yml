@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  database:
+    image: mongo
+
+  app:
+    #    image: caso tenha uma imagem no dockerhub
+    #    build: quando a imagem está na máquina
+    build: .
+    ports:
+      - "3001:3000"
+    # port local:port docker
+    environment:
+      - DB_URL=database
+    # cria uma variável de ambiente para utilizarmos na aplicação
+    command: yarn dev
+    # executa o comando do package.json para executar o nodemon, pois aqui direto ele não reconheceria o nodemon como comando bash
+    depends_on:
+      - database
+    # define a imagem que o app depende
+    volumes:
+      - ".:/usr/app"
