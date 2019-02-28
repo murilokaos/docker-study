@@ -8,7 +8,7 @@ mongoose.connect(`mongodb://${process.env.DB_URL}:27017/nodemongo`, {
 });
 
 app.get("/", (req, res, next) => {
-  return res.send("Hello world 3");
+  return res.send("Hello world");
 });
 
 app.listen(3000);

@@ -60,8 +60,8 @@ services:
     // # define a imagem que o app depende
     volumes:
       - ".:/usr/app"
-
-
 ```
+
+-Run: sudo docker-compose up -d --build
 
 # Estudar kubernets para conseguir orquestrar as imagens do docker para produção
